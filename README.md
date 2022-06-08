@@ -3,7 +3,8 @@ This web service accepts all http requests and replies with an infinite stream o
 The implementation is in a middleware so that it captures all incoming requests. A test controller is left in the project to show that requests never get to the test endpoint.
 
 ## Limitations 
-The service is self-hosted via Kestrel and the default number of concurrent connections is set to Unlimited, hence, there's no limit from the application, the service is only limited by the hosting hardware. 
+The service is self-hosted via Kestrel and the default number of concurrent connections is set to Unlimited, hence, there's no limit from the application, the service is only limited by the hosting hardware.
+ 
 The service is hosted in a Linux container. The number of incoming TCP connections from different source IPs to port 80 is limited by the file descriptors. This limit is configurable, but is probably beyond the scope of this exercise. But it [can be done](https://www.linkedin.com/pulse/ec2-tuning-1m-tcp-connections-using-linux-stephen-blum).
 
 ## Assumptions
