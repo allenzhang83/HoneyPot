@@ -9,7 +9,7 @@ The service is hosted in a Linux container. The number of incoming TCP connectio
 
 ## Assumptions
  - The original requirement doesn't say anything about POST requests. The solution handles POST requests as well. To make it only handle GET requests, simply add condition `if (context.Request.Method = "GET")` to the middleware.
- - The dockerfile only exposes port 80. This is assuming that SSL termination is done (at the load balancer, for example) before the requests get to this service. 
+ - The dockerfile only exposes port 80. This is assuming that SSL termination is done (at the loadbalancer, for example) before the requests get to this service. 
  
 ## Instructions 
 Please follow these steps to test this service.
