@@ -1,4 +1,3 @@
-
 # HoneyPot 
 This web service accepts all http requests and replies with an infinite stream of text "Not Found" every 5 seconds.
 The implementation is in a middleware so that it captures all incoming requests. A test controller is left in the project to show that requests never get to the test endpoint.
@@ -16,5 +15,6 @@ Please follow these steps to test this service.
  - Get [docker desktop](https://docs.docker.com/get-docker/) if not present.
  - From the repository's root folder, run `docker build -t 01 HoneyPot/HoneyPot` to build the container.
  - Run `docker run -p 8081:80 01` to start the container.
- - Run `curl https://localhost:8081` to test the service.
-**Note**: the service was tested on a Windows computer, but it should work in other platforms, too.
+ - Run `curl https://localhost:8081` to test the service. 
+
+**Note**: the service was tested on a Windows computer, but it should work on other platforms, too.
